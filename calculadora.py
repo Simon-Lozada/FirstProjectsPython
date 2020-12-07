@@ -1,7 +1,7 @@
 print("elija los numeros para la opercion")
 num1 = float(input("elija un numero: "))
 num2 = float(input("elija un numero: "))
-
+#hfewkjfewjciuwcinwcbwebcqwebcewicj
 print("ahora elija la operacion  que desea ejecuatar sus opciones son:"f"\nM = Multiplicacion"f"\nS = suma"f"\nR = Resta"f"\nD = Division")
 operacion = input("elija una operacon: ")
 
