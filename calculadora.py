@@ -1,25 +1,25 @@
-print("elija los numeros para la opercion")
-num1 = float(input("elija un numero: "))
-num2 = float(input("elija un numero: "))
-#hfewkjfewjciuwcinwcbwebcqwebcewicj
-print("ahora elija la operacion  que desea ejecuatar sus opciones son:"f"\nM = Multiplicacion"f"\nS = suma"f"\nR = Resta"f"\nD = Division")
-operacion = input("elija una operacon: ")
+print("choose the numbers for the operation")
+num1 = float(input("choose a number: "))
+num2 = float(input("choose a number: "))
+
+print("now choose the operation you want to execute your options are:"f"\nM = Multiplication"f"\nS = sum"f"\nR = subtraction"f"\nD = Division")
+operacion = input("Choose the operation: ")
 
 
 if operacion == "S":
-    suma = num1 + num2 
-    print (f"\nLa suma es: {suma}")
+    sum = num1 + num2 
+    print (f"\nThe sum es: {sum}")
 
 if operacion == "R":
-    resta = num1 - num2 
-    print (f"\nLa resta es: {resta}")
+    subtraction = num1 - num2 
+    print (f"\nThe subtraction es: {subtraction}")
 
 if operacion == "M":
-    Multiplicacion = num1 * num2 
-    print (f"\nLa resta es: {Multiplicacion}")
+    Multiplication = num1 * num2 
+    print (f"\nThe Multiplication es: {Multiplication}")
 
 if operacion == "D":
-    division = num1 / num2 
-    print (f"\nLa Divison es: {division}")
+    Division = num1 / num2 
+    print (f"\nThe Division es: {Division}")
 
 
