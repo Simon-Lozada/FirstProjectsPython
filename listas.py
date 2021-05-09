@@ -1,81 +1,80 @@
-print("Introdusca los valores para la lista")
+print("Enter the values for the list")
 
-# Los elementos de la lista
+# List items
 
-lista = [input("ponga el Primer Valor: "), input("ponga el Segundo Valor: "), input("ponga el Tercer Valor: "), input(" ponga el Cuarto Valor: "), input("ponga el Quinto Valor: ")]
+list = [input("put the First Value: "), input("put the Second Value: "), input("put the Third Value: "), input("put the Fourth Value: "), input("put the Fifth Value: ")]
 
-print(f" \nComponentes de la lista: {lista[0]}, {lista[1]}, {lista[2]}, {lista[3]}, {lista[4]}")
+print(f" \nList components: {list[0]}, {list[1]}, {list[2]}, {list[3]}, {list[4]}")
 
-accion = "y"
+action = "y"
 
-# Para que, en el caso de que el usuario no coloque una accion correcta, tenga la oportunidad de repetir 
+# So that, in the event that the user does not place a correct action, they have the opportunity to repeat
 
-while accion!="x":
+while action!="x":
 
-    # Preguntandole si desea eliminar un elemento de la lista o si lo quiere dejar asi
+    # Asking if you want to remove an item from the list or if you want to leave it that way
 
-    accion = input("\nQuiere hacer algun cambio en la lista ?: ")
-    print("para añadir algun elemento  , 'añadir'")
-    print("para eliminar algun elemto  ,'eliminar' ")
-    print("Para hacer los dos ponga ,'ambos' ")
+    action = input("\nDo you want to make any changes to the list ?: ")
+    print("to add an element, 'add'")
+    print("to remove an element, 'remove'")
+    print("To do both put, 'both'")
 
-    # En el caso de que si
+    # In the event that yes
 
-    while accion == "si":
+    while action == "yes":
 
-        # Preguntandole si quiere eliminar y/o añadir un elemento
+        # Asking if you want to remove and / or add an item
 
-        seleccion = input("\n¿Quiere eliminar o añadir un elemento (Pueden elegirse ambas)?: ")
+        selection = input("\nDo you want to remove or add an item (Both can be chosen) ?: ")
         
-        # En el caso de que quiera añadir algun elemento 
-        if seleccion == "añadir":
-                insertar = input("\n¿Que elemento quiere insertar?: ")#pregunto que elemento quiere añadir 
-                pocicion = int(input("\n¿En que pocicion?: "))#le pido la posicion que quiere que tome 
+        # In case you want to add an element
+        if selection == "add":
+                insertar = input("\nWhat element do you want to insert ?: ")#Ask what element you want to add
+                pocicion = int(input("\nIn what position?: "))# I ask you for the position you want me to take
            
-                lista.insert(pocicion-1,insertar)#y lo inserto 
-                accion = "x"
+                list.insert(pocicion-1,insertar)#and insert it
+                action = "x"
 
-                print("\nÂ¡Elemento agregado!")
+                print("\nItem added!")
 
-        # En el caso de que quiera eliminar algun elemento de la listas
+        # In case you want to remove an item from the lists
         
-        if seleccion == "eliminar" :
-                eliminar = input("\n¿Que elemento quiere eliminar?: ")
+        if selection == "remove" :
+                remove = input("\nWhat item do you want to delete ?: ")
 
-                lista.remove(eliminar)#(Me doy cuenta que si enves de decir el nombre del elemnto  a eliminar pones la posicion lo toma como un error)
-                accion = "x"
+                list.remove(remove)# (I realize that if you say the name of the element to delete, you put the position, it takes it as an error)
+                action = "x"
 
                 print("\n¡Elemento eliminado!")
 
-        # En el caso de que quiera hacer ambas acciones
+        #In case you want to do both actions
 
-        if seleccion == "ambos":
-                #aqui insertamos
-                insertar = input("\n¿Que elemento quiere insertar?: ")
-                accion = int(input("\n¿En que pocicion?: "))
-                lista.insert(accion - 1, insertar)
-                #aqui eliminamos 
-                eliminar = input("\n¿Que elemento quiere eliminar?: ")#(Me doy cuenta que si enves de decir el nombre del elemnto  a eliminar pones la posicion lo toma como un error pero igual )
+        if selection == "ambos":
+                # here we insert
+                insertar = input("\n¿What element do you want to insert ?: ")
+                action = int(input("\n¿En que pocicion?: "))
+                list.insert(action - 1, insertar)
+                #here we eliminate
+                remove = input("\n¿What element do you want to remove ?: ")# (I realize that if you say the name of the element to delete, you put the position, it takes it as an error but still )
                 
-                lista.remove(eliminar)
+                list.remove(remove)
 
-                accion = "x"
+                action = "x"
 
-        # En el caso de que la accion sea invalida
+       # In the event that the action is invalid
 
-        elif accion!="x":
-                print("\nEsa no es una accion , no es posible ")
+        elif action!="x":
+                print("\nThat is not an action, it is not possible")
 
-    # En el caso que desde un principio haya dicho que no queria modificar la lista
+        # En el caso que desde un principio haya dicho que no queria modificar la lista
 
-    if accion == "no":
-        print("\nOperacion terminada")
+    if action == "no":
+        print("\nOperation completed")
 
-        accion = "x"
+        action = "x"
 
-    # En el caso que haya puesto cualquier cosa invalida
-
+# In case you have put anything invalid
     else:
-        print("\nEsa no es una accion Valida, intente de nuevo")
+        print("\nThis is not a valid action, try again")
 
-print(lista)
+print(list)
